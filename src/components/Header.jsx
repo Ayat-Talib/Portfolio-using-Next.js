@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaVercel } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Header = () => (
   <header className="bg-gray-900 text-white fixed w-full z-10 shadow-lg">

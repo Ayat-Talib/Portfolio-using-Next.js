@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Hero = () => (
   <section
     id="hero"
@@ -8,9 +10,11 @@ const Hero = () => (
 
     {/* Profile Picture */}
     <div className="relative mb-12 mt-40">
-      <img
+      <Image
         src="/images/profile.png"
         alt="Ayat Talib"
+        width={192}
+        height={192}
         className="w-[60%] md:w-48 md:h-48 rounded-full shadow-lg ring-4 ring-blue-500 object-cover transform hover:scale-110 transition-transform duration-300"
       />
       <div className="absolute top-0 right-0 w-8 h-8 bg-blue-500 rounded-full animate-ping"></div>
@@ -18,7 +22,7 @@ const Hero = () => (
 
     {/* Heading with Typing Animation */}
     <h1 className="text-4xl md:text-6xl font-extrabold text-center animate__animated animate__fadeIn animate__delay-1s">
-      Hi, I'm <span className="text-blue-400">Ayat Talib</span>
+      Hi, I&apos;m <span className="text-blue-400">Ayat Talib</span>
     </h1>
     
     {/* Description with Fade-In Animation */}
@@ -37,7 +41,7 @@ const Hero = () => (
 
     {/* Animated Down Arrow */}
     <div className="mt-12 animate-bounce">
-      <a href="#projects">
+      <a href="#projects" aria-label="Scroll to Projects Section">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="h-6 w-6 text-blue-400"
@@ -58,4 +62,3 @@ const Hero = () => (
 );
 
 export default Hero;
-
